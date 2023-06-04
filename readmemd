@@ -1,0 +1,29 @@
+# git-submodules-troubleshooting
+
+I have worked with and created and maintained a number of projects with using [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) and value the feature 
+and would class myself as an "expert" or at least "proficient" git user and yet every so often when I hit bugs with git submodules that I find irritating. 
+This derives from a lack of undertanding of how git submodules work, but my googling around the topic often results with "how-to pages" telling me how
+useful git submodules is without really giving me an understanding. 
+
+This page of limited scope tries to give a git submodules user sufficient understanding to fix their git submodules problems, while also focusing on submodules. 
+
+# References
+1. The [official documentation](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+
+# Confusing things about `git submodules`
+
+Git submodules is a layer that runs on top of git - this is confusing because it is "half git / half something else" and understanding git submodules require a measure 
+of undestanding of both.
+
+Git submodules often "just works" enough that you don't need to understand the internals - this means that you don't naturally buid uip an understanding of git submodules through us.
+
+# Cookbook
+## `git submodule update` hangs on `Cloning into...`
+Potentially repository that you are cloning from does not exist. You might need to get it running again, or change it. 
+
+Proper fix:
+1. Go to `.gitmodules` check the `url` entry for the submodule in question
+2. Check that this can be checked out, if not update the url
+3. Remove the [submodule] url parameter for this module from `.git/config`
+4. Run `git submodule init $MODULE` to create a new entry `git/config`
+5. Run `git submodule update $MODULE` to check out the git moudle
