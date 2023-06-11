@@ -24,7 +24,6 @@ linux ai assistant
 1. An entry in `.gitconfig` contains information about what is actually checked out (this information is not committed) and allows for tweaks.
 
 # Cookbook
-
 ## I updated `.gitmodules` but my repository but git clone still doesn't work
 The repository url is cached in .gitconfig. Use [your editor](#git-config) to remove it from `.git/config`.
 
@@ -38,6 +37,11 @@ Proper fix:
 4. Run `git submodule init $MODULE` to create a new entry `git/config`
 5. Run `git submodule update $MODULE` to check out the git moudle
 
+## I want to remove a git submodule
+
+1. Commit .gitmodules `git add .gitmodules; git commit`
+2. git rm submodule
+3. Commit (you can remove the entry from `.gitmodules` if you like)
 
 ## Editing `.git/config` is too slow
 <a name="git-config" />
