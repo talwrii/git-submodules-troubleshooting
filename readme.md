@@ -39,7 +39,7 @@ Proper fix:
 5. Run `git submodule update $MODULE` to check out the git moudle
 
 
-# Editing `.git/config` is too slow
+## Editing `.git/config` is too slow
 <a name="git-config" />
 
 You can use `git config`
