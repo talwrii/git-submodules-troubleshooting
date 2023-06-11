@@ -17,12 +17,17 @@ of undestanding of both.
 
 Git submodules often "just works" enough that you don't need to understand the internals - this means that you don't naturally buid uip an understanding of git submodules through us.
 linux ai assistant
-# How git submodules work
+
+# How git submodules actually works
 1. A commit object is stored in the working tree at a location
 1. An entry in `.gitmodules` contains information about where git submodules should find this commit. This is committed and shared with other people.
 1. An entry in `.gitconfig` contains information about what is actually checked out (this information is not committed) and allows for tweaks.
 
 # Cookbook
+
+## I updated `.gitmodules` but my repository but git clone still doesn't work
+The repository url is cached in .gitconfig. Use [your editor](#git-config) to remove it from `.git/config`.
+
 ## `git submodule update` hangs on `Cloning into...`
 Potentially repository that you are cloning from does not exist. You might need to get it running again, or change it. 
 
@@ -32,3 +37,12 @@ Proper fix:
 3. Remove the [submodule] url parameter for this module from `.git/config`
 4. Run `git submodule init $MODULE` to create a new entry `git/config`
 5. Run `git submodule update $MODULE` to check out the git moudle
+
+
+# Editing `.git/config` is too slow
+<a name="git-config" />
+
+You can use `git config`
+
+* `git config | grep submodule`
+* `git config --unset submodules.$path`
