@@ -12,11 +12,11 @@ This page of limited scope tries to give a git submodules user sufficient unders
 1. The [official documentation](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 # Confusing things about `git submodules`
-Git submodules is a layer that runs on top of git - this is confusing because it is "half git / half something else" and understanding git submodules require a measure 
-of undestanding of both.
+Git submodules is a layer that runs on top of git - this is confusing because it is "half git / half something else" and understanding git submodules require a measure  of undestanding of both.
 
-Git submodules often "just works" enough that you don't need to understand the internals - this means that you don't naturally buid uip an understanding of git submodules through us.
-linux ai assistant
+Git submodules often "just works" enough that you don't need to understand the internals - this means that you don't naturally buid uip an understanding of git submodules through us. 
+
+Despite mostly "just working" sometimes certain things you need to do (particularly when they go wrong) aren't abstracted over.
 
 # How git submodules actually works
 1. A commit object is stored in the working tree at a location
@@ -35,13 +35,12 @@ Proper fix:
 2. Check that this can be checked out, if not update the url
 3. Remove the [submodule] url parameter for this module from `.git/config`
 4. Run `git submodule init $MODULE` to create a new entry `git/config`
-5. Run `git submodule update $MODULE` to check out the git moudle
+5. Run `git submodule update $MODULE` to check out the git module
 
 ## I want to remove a git submodule
 
 1. Commit .gitmodules `git add .gitmodules; git commit`
-2. git rm submodule
-3. Commit (you can remove the entry from `.gitmodules` if you like)
+2. git rm submodule (this apparently automatically updates .gitmoudles)
 
 ## Editing `.git/config` is too slow
 <a name="git-config" />
