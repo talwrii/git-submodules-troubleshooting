@@ -1,5 +1,4 @@
 # git-submodules-troubleshooting
-
 I have worked with and created and maintained a number of projects with using [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) and value the feature 
 and would class myself as an "expert" or at least "proficient" git user and yet every so often when I hit bugs with git submodules that I find irritating. 
 This derives from a lack of undertanding of how git submodules work, but my googling around the topic often results with "how-to pages" telling me how
@@ -11,11 +10,15 @@ This page of limited scope tries to give a git submodules user sufficient unders
 1. The [official documentation](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 # Confusing things about `git submodules`
-
 Git submodules is a layer that runs on top of git - this is confusing because it is "half git / half something else" and understanding git submodules require a measure 
 of undestanding of both.
 
 Git submodules often "just works" enough that you don't need to understand the internals - this means that you don't naturally buid uip an understanding of git submodules through us.
+linux ai assistant
+# How git submodules work
+1. A commit object is stored in the working tree at a location
+1. An entry in `.gitmodules` contains information about where git submodules should find this commit. This is committed and shared with other people.
+1. An entry in `.gitconfig` contains information about what is actually checked out (this information is not committed) and allows for tweaks.
 
 # Cookbook
 ## `git submodule update` hangs on `Cloning into...`
