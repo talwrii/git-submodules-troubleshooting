@@ -10,7 +10,7 @@ This page of limited scope tries to give a git submodules user sufficient unders
 
 # References
 1. The [official documentation](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
-2. [This useful cheatsheet](https://www.devroom.io/2020/03/09/the-git-submodule-cheat-sheet/)
+2. [This useful cheatsheet](https://www.devroom.io/2020/03/09/the-git-submodule-cheat-sheet/); does not really discuss how things work under the hood.
 
 # Confusing things about `git submodules`
 Git submodules is a layer that runs on top of git - this is confusing because it is "half git / half something else" and understanding git submodules require a measure  of undestanding of both.
