@@ -1,4 +1,6 @@
 # git-submodules-troubleshooting
+Is this useful: [Buy me a coffee](https://www.buymeacoffee.com/talwrii/)
+
 I have worked with and created and maintained a number of projects with using [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) and value the feature 
 and would class myself as an "expert" or at least "proficient" git user and yet every so often when I hit bugs with git submodules that I find irritating. 
 This derives from a lack of undertanding of how git submodules work, but my googling around the topic often results with "how-to pages" telling me how
