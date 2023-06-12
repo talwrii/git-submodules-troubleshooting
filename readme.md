@@ -43,6 +43,11 @@ Proper fix:
 1. Commit .gitmodules `git add .gitmodules; git commit`
 2. git rm submodule (this apparently automatically updates .gitmoudles)
 
+## Other things to try
+
+1. `git submodule deinit $path`
+1. `git submodule init $path`
+
 ## Editing `.git/config` is too slow
 <a name="git-config" />
 
